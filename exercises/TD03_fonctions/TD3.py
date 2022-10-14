@@ -32,7 +32,35 @@ print(temps[3], "secondes", end=" ")
 
 
 def afficheTemps(temps):
-    
+    if temps[0] == 1:
+        jours = str(temps[0]) + " jour"
+    elif temps[0] > 1:
+        jours = str(temps[0]) + " jours"
+    else:
+        jours = print()
+
+    if temps[1] == 1:
+        heures = str(temps[1]) + " jour"
+    elif temps[1] > 1:
+        heures = str(temps[1]) + " jours"
+    else:
+        heures = print()
+
+    if temps[2] == 1:
+        minutes = str(temps[2]) + " jour"
+    elif temps[2] > 1:
+        minutes = str(temps[2]) + " jours"
+    else:
+        minutes = print()
+
+    if temps[3] == 1:
+        secondes = str(temps[3]) + " jour"
+    elif temps[3] > 1:
+        secondes = str(temps[3]) + " jours"
+    else:
+        secondes = print()
+
+    print(jours, heures, minutes, secondes)
 
 
-afficheTemps((1,0,14,23)) 
+afficheTemps((1, 0, 14, 23))
