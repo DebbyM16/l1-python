@@ -29,3 +29,9 @@ print(temps[0], "jours", end=" ")
 print(temps[1], "heures", end=" ")
 print(temps[2], "minutes", end=" ")
 print(temps[3], "secondes", end=" ")
+
+
+def afficheTemps(temps):
+    
+
+afficheTemps((1,0,14,23)) 
