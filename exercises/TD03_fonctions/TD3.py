@@ -68,3 +68,11 @@ def afficheTemps(temps):
 
 
 afficheTemps((1, 0, 14, 23))
+
+
+# demande du temps à l'utilisateur
+
+def demandeTemps():
+    
+
+afficheTemps(demandeTemps())
