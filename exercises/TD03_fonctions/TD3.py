@@ -34,4 +34,5 @@ print(temps[3], "secondes", end=" ")
 def afficheTemps(temps):
     
 
+
 afficheTemps((1,0,14,23)) 
