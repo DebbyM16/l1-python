@@ -1,6 +1,6 @@
+# conversion du temps en secondes
 
 def tempsEnSeconde(temps):
-    """ Renvoie la valeur en seconde de temps."""
     jour = temps[0] * 24 * 3600
     heure = temps[1] * 3600
     minute = temps[2] * 60
@@ -13,9 +13,10 @@ temps = (3, 23, 1, 34)
 print(type(temps))
 print(tempsEnSeconde(temps), "secondes")
 
+# conversion des secondes en temps
+
 
 def secondeEnTemps(seconde):
-    """Renvoie le temps qui correspond au nombre de seconde."""
     jours = seconde // (24 * 3600)
     heures = (seconde % (24 * 3600)) // 3600
     minutes = (seconde % 3600) // 60
@@ -30,6 +31,8 @@ print(temps[1], "heures", end=" ")
 print(temps[2], "minutes", end=" ")
 print(temps[3], "secondes", end=" ")
 
+
+# affichage du temps
 
 def afficheTemps(temps):
     if temps[0] == 1:
