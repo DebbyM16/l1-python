@@ -25,7 +25,7 @@ def secondeEnTemps(seconde):
 
 
 temps = secondeEnTemps(100000)
-print(temps[0], "jours")
-print(temps[1], "heures")
-print(temps[2], "minutes")
-print(temps[3], "secondes")
+print(temps[0], "jours", end=" ")
+print(temps[1], "heures", end=" ")
+print(temps[2], "minutes", end=" ")
+print(temps[3], "secondes", end=" ")
