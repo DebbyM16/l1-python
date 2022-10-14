@@ -17,9 +17,9 @@ print(tempsEnSeconde(temps), "secondes")
 def secondeEnTemps(seconde):
     """Renvoie le temps qui correspond au nombre de seconde."""
     jours = seconde // (24 * 3600)
-    heures = (jours % (24 * 3600)) // 3600
-    minutes = (heures % 3600) // 60
-    secondes = minutes % 60
+    heures = (seconde % (24 * 3600)) // 3600
+    minutes = (seconde % 3600) // 60
+    secondes = seconde % 60
     conversion2 = (jours, heures, minutes, secondes)
     return conversion2
 
