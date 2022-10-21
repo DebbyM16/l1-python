@@ -64,7 +64,7 @@ def afficheTemps(temps):
     else:
         secondes = print("")
 
-    print(jours, heures, minutes, secondes)
+    return (jours, heures, minutes, secondes)
 
 
 afficheTemps((1, 0, 14, 23))
@@ -90,5 +90,20 @@ def demandeTemps():
 
 afficheTemps(demandeTemps())
 
+
 # la somme de 2 temps
 
+
+def sommeTemps(temps1, temps2):
+    temps1_seconde = tempsEnSeconde(temps1)
+    temps2_seconde = tempsEnSeconde(temps2)
+    somme_temps_s = temps1_seconde + temps2_seconde
+
+    somme_temps_t = secondeEnTemps(somme_temps_s)
+
+    somme_temps = afficheTemps(somme_temps_t)
+
+    print(somme_temps)
+
+
+sommeTemps((2, 3, 4, 25), (5, 22, 57, 1))
