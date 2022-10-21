@@ -107,3 +107,19 @@ def sommeTemps(temps1, temps2):
 
 
 sommeTemps((2, 3, 4, 25), (5, 22, 57, 1))
+
+
+# calcul d'un pourcentage de temps
+
+
+def proportionTemps(temps, proportion):
+    temps_s = tempsEnSeconde(temps)
+
+    protemps = temps_s * proportion
+
+    protemps = secondeEnTemps(protemps)
+
+    return protemps
+
+
+print(afficheTemps(proportionTemps((2, 0, 36, 0), 0.2)))
