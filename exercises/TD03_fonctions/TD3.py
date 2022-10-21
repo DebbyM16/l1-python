@@ -73,6 +73,41 @@ afficheTemps((1, 0, 14, 23))
 # demande du temps à l'utilisateur
 
 def demandeTemps():
-    
+    jour_demande = int(input("Combien de jours ?"))
+    heure_demande = int(input("Combien d'heures ?"))
+    minute_demande = int(input("Combien de minutes ?"))
+    seconde_demande = int(input("Combien de secondes ?"))
+
+    if jour_demande == 1:
+        jour_demande = str(jour_demande) + " jour"
+    else:
+        jour_demande = str(jour_demande) + " jours"
+
+    if heure_demande >= 24:
+        heure_demande = int(input("Réessayer! Combien d'heures ?"))
+        heure_demande = str(heure_demande) + " heures"
+    elif heure_demande == 1:
+        heure_demande = str(heure_demande) + " heure"
+    else:
+        heure_demande = str(heure_demande) + " heures"
+
+    if minute_demande >= 60:
+        minute_demande = int(input("Réessayer! Combien de minutes ?"))
+        minute_demande = str(minute_demande) + " minutes"
+    elif minute_demande == 1:
+        minute_demande = str(minute_demande) + " minute"
+    else:
+        minute_demande = str(minute_demande) + " minutes"
+
+    if seconde_demande >= 60:
+        seconde_demande = int(input("Réessayer! Combien de secondes ?"))
+        seconde_demande = str(seconde_demande) + " secondes"
+    elif seconde_demande == 1:
+        seconde_demande = str(seconde_demande) + " seconde"
+    else:
+        seconde_demande = str(seconde_demande) + " secondes"
+
+    print(jour_demande, heure_demande, minute_demande, seconde_demande)
+
 
 afficheTemps(demandeTemps())
