@@ -41,28 +41,28 @@ def afficheTemps(temps):
     elif temps[0] > 1:
         jours = str(temps[0]) + " jours"
     else:
-        jours = print()
+        jours = print("")
 
     if temps[1] == 1:
-        heures = str(temps[1]) + " jour"
+        heures = str(temps[1]) + " heure"
     elif temps[1] > 1:
-        heures = str(temps[1]) + " jours"
+        heures = str(temps[1]) + " heures"
     else:
-        heures = print()
+        heures = print("")
 
     if temps[2] == 1:
-        minutes = str(temps[2]) + " jour"
+        minutes = str(temps[2]) + " minute"
     elif temps[2] > 1:
-        minutes = str(temps[2]) + " jours"
+        minutes = str(temps[2]) + " minutes"
     else:
-        minutes = print()
+        minutes = print("")
 
     if temps[3] == 1:
-        secondes = str(temps[3]) + " jour"
+        secondes = str(temps[3]) + " seconde"
     elif temps[3] > 1:
-        secondes = str(temps[3]) + " jours"
+        secondes = str(temps[3]) + " secondes"
     else:
-        secondes = print()
+        secondes = print("")
 
     print(jours, heures, minutes, secondes)
 
@@ -78,36 +78,17 @@ def demandeTemps():
     minute_demande = int(input("Combien de minutes ?"))
     seconde_demande = int(input("Combien de secondes ?"))
 
-    if jour_demande == 1:
-        jour_demande = str(jour_demande) + " jour"
-    else:
-        jour_demande = str(jour_demande) + " jours"
-
-    if heure_demande >= 24:
+    while heure_demande >= 24:
         heure_demande = int(input("Réessayer! Combien d'heures ?"))
-        heure_demande = str(heure_demande) + " heures"
-    elif heure_demande == 1:
-        heure_demande = str(heure_demande) + " heure"
-    else:
-        heure_demande = str(heure_demande) + " heures"
-
-    if minute_demande >= 60:
+    while minute_demande >= 60:
         minute_demande = int(input("Réessayer! Combien de minutes ?"))
-        minute_demande = str(minute_demande) + " minutes"
-    elif minute_demande == 1:
-        minute_demande = str(minute_demande) + " minute"
-    else:
-        minute_demande = str(minute_demande) + " minutes"
-
-    if seconde_demande >= 60:
+    while seconde_demande >= 60:
         seconde_demande = int(input("Réessayer! Combien de secondes ?"))
-        seconde_demande = str(seconde_demande) + " secondes"
-    elif seconde_demande == 1:
-        seconde_demande = str(seconde_demande) + " seconde"
-    else:
-        seconde_demande = str(seconde_demande) + " secondes"
 
-    print(jour_demande, heure_demande, minute_demande, seconde_demande)
+    return (jour_demande, heure_demande, minute_demande, seconde_demande)
 
 
 afficheTemps(demandeTemps())
+
+# la somme de 2 temps
+
