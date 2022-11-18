@@ -1,4 +1,4 @@
-# problème de Syracuse
+# Problème de Syracuse
 
 def syracuse(n):
     """ Retourne la liste des valeurs de la suite en partant de n jusqu'à 1 """
@@ -30,3 +30,14 @@ def testeConjecture(n_max):
 
 print(testeConjecture(10000))
 
+# Temps de vol
+
+
+def tempsVol(n):
+    """ Retourne le temps de vol de n """
+    L_vol = syracuse(n)
+
+    return len(L_vol)-1
+
+
+print("Le temps de vol de", 3, "est", tempsVol(3))
