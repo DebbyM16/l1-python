@@ -20,7 +20,8 @@ print(syracuse(3))
 
 def testeConjecture(n_max):
     """ Teste la conjecture de Collatz pour toutes les valeurs de 1 à n_max """
-    L_collatz = syracuse(n_max)
+    for i in range(1, n_max):
+        L_collatz = syracuse(i)
     if L_collatz[-1] == 1:
         collatz = True
     else:
