@@ -41,3 +41,15 @@ def tempsVol(n):
 
 
 print("Le temps de vol de", 3, "est", tempsVol(3))
+
+# Temps de vol jusqu'à n_max
+
+
+def tempsVolListe(n_max):
+    """ Retourne la liste de tous les temps de vol de 1 à n_max """
+    Tps_vol = [tempsVol(i) for i in range(1, n_max+1)]
+
+    return Tps_vol
+
+
+print(tempsVolListe(100))
