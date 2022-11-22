@@ -54,3 +54,16 @@ def tempsVolListe(n_max):
 
 
 print(tempsVolListe(100))
+
+# l'atitude d'un nombre
+
+
+def altitude(n_donne):
+    """ Retourne le nombre avec le plus grand temps de vol """
+    tps_vol = [tempsVolListe(i) for i in range(1, n_donne+1)]
+    tps_vol1 = sorted(tps_vol)
+
+    return tps_vol1
+
+
+print(altitude(10000))
