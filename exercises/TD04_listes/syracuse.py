@@ -60,10 +60,14 @@ print(tempsVolListe(100))
 
 def altitude(n_donne):
     """ Retourne le nombre avec le plus grand temps de vol """
-    tps_vol = [tempsVolListe(i) for i in range(1, n_donne+1)]
-    tps_vol1 = sorted(tps_vol)
+    tps_vol = []
+    for i in range(1, n_donne + 1):
+        vol = tempsVol(i)
+        tps_vol.append(vol)
+        tps_vol1 = sorted(tps_vol)
+        print(tps_vol1)
 
-    return tps_vol1
+    return tps_vol1[n_donne-1]
 
 
-print(altitude(10000))
+print(altitude(100))
