@@ -70,3 +70,43 @@ def testDiagonalesEgales(carre):
 
 print(testDiagonalesEgales(carre_mag))
 print(testDiagonalesEgales(carre_pas_mag))
+
+# Test du carré magique
+
+
+def estCarreMagique(carre):
+    """ Renvoie True si c'est un carre magique et False sinon"""
+    L = testLignesEgales(carre)
+    C = testColonnesEgales(carre)
+    D = testDiagonalesEgales(carre)
+
+    if L == C == D:
+        return True
+    else:
+        return False
+
+
+print(estCarreMagique(carre_mag))
+print(estCarreMagique(carre_pas_mag))
+
+# Test du carré normal
+
+
+def estNormal(carre):
+    """Renvoie True si contient toutes les valeurs de 1 à n^2, sinon False"""
+    n = len(carre)
+
+    for i in range(1, (n**2)+1):
+        p = 0
+        m = 0
+        while p != n:
+            if i not in carre[p]:
+                m += 1
+            p += 1
+        if m == n:
+            return False
+    return True
+
+
+print(estNormal(carre_mag))
+print(estNormal(carre_pas_mag))
